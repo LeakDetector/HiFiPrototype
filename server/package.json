@@ -1,0 +1,20 @@
+{
+  "name": "DossierWeb",
+  "version": "0.0.0",
+  "description": "The web component of the Dossier HiFi Prototype",
+  "dependencies": {
+    "express": "~3.4.4",
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeakDetector/HiFiPrototype.git"
+  },
+  "author": "Team Valve (CMU HCII)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/LeakDetector/HiFiPrototype/issues"
+  }
+}

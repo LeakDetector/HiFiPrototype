@@ -1,0 +1,31 @@
+/* =============================================================================
+ * main.scss
+ * Author: Dillon Grove
+ * 
+ * This file is repsonsbile for importing all dependencies and providing main
+ * styles. It is the only file ultimately included in the page
+ *
+ * ========================================================================== */
+
+/* ========== IMPORTS ======================================================= */
+@import "compass/reset";
+@import "compass/css3";
+@import "globals";
+@import "animations";
+
+@import "compass/utilities/general/clearfix";
+
+/*========== BASIC STYLES =================================================== */
+
+html {
+    /* prevent webkit and ms mobile browsers from resizing text */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    height: 100%;
+}
+
+body {
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+    height: 100%;
+}
