@@ -5,7 +5,7 @@ class AppDelegate
   POPUP_WIDTH = 300
   POPUP_HEIGHT = 300
   ARROW_HEIGHT = 12
-  WEB_VIEW_URL = "http://google.com"
+  WEB_VIEW_URL = "http://localhost:7000"
 
   # Runs when the application launches (basically this is "main")
   def applicationDidFinishLaunching(notification)
