@@ -8,6 +8,9 @@ var constants = require("./constants.js");
 // This an npm module which includes references to a lot of templating engines
 var templatingEngines = require('consolidate');
 
+// Data
+var dossiers = require("./dossiers.js");
+
 /* ---------- CONFIGURATION ------------------------------------------------- */
 
 app.configure(function(){
