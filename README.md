@@ -8,15 +8,16 @@ express). These components have __separate__ installation and run practices,
 which will be documented below. In order to fully "run" this prototype, you'll
 need to do the following, in the order specified:
 
-1. Install the web app
-2. Run the web app
-3. Install RubyMotion
-4. Run the status bar app
+1. [Install the web app](#install-the-web-app)
+2. [Run the web app](#run-the-web-app)
+3. [Install RubyMotion](#install-rubymotion)
+4. [Run the status bar app](#run-the-status-bar-app)
 
-_However_, if you don't want to install RubyMotion you can run the web app as
-standalone to simulate a status bar app experience. You won't be able to click
-on a fancy icon in the status bar, but you'll be able to basically see what
-that'll look like. More on this later.
+_However_, if you don't want to install RubyMotion you can at least see what the
+status bar app would look like by running the web app in "standalone" mode. All
+this does is add some styling to the web app to make it look as though it's a
+mac status bar app. For instructions on how to do this see the [standalone]()
+section.
 
 ## Install the web app
 The web app is a standard node server using express. To install, do the
@@ -36,7 +37,7 @@ node server.js
 If you've opted to run the app in standalone mode, please continue directly to
 the [standalone mode]() section. If not, continue to installing RubyMotion.
 
-## Install Ruby Motion
+## Install RubyMotion
 The status bar app is developed using [RubyMotion](http://www.rubymotion.com/),
 so you'll need to purchase and install it in order to build and run the app
 yourself.
@@ -44,7 +45,7 @@ yourself.
 _Don't want to install RubyMotion? Consider running the web app in [standalone
 mode]()._
 
-## Running the status bar app
+## Run the status bar app
 Once you have RubyMotion installed, run the following:
 ```bash
 cd DossierProto
@@ -56,4 +57,25 @@ the first time you do it.__ After it's done, you should see the app pop up in
 your status bar.
 
 ## Standalone Mode
-More on this in a bit
+To run the app in standalone mode you'll need to change the `standalone`
+variable in in _globals.scss. However, in order for this to take effect you'll
+need to recompile the SCSS with Compass. Compass in turn depends on Ruby, which
+you should already have installed if you're running OSX.
+
+In order to install Compass, you'll need to run the following:
+```bash
+gem install compass
+```
+
+See the [compass installation documentation](http://compass-style.org/install/)
+for more information.
+
+After you've installed compass (or if you already had it installed), run the
+following commands in order to recompile the SCSS.
+```bash
+cd server/static
+compass watch
+```
+
+This will immediately recompile the existing SCSS as well as watch for any
+future changes.
