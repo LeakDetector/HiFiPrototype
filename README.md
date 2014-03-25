@@ -16,8 +16,8 @@ need to do the following, in the order specified:
 _However_, if you don't want to install RubyMotion you can at least see what the
 status bar app would look like by running the web app in "standalone" mode. All
 this does is add some styling to the web app to make it look as though it's a
-mac status bar app. For instructions on how to do this see the [standalone]()
-section.
+mac status bar app. For instructions on how to do this see the
+[standalone](#standalone-mode) section.
 
 ## Install the web app
 The web app is a standard node server using express. To install, do the
@@ -35,15 +35,16 @@ node server.js
 ```
 
 If you've opted to run the app in standalone mode, please continue directly to
-the [standalone mode]() section. If not, continue to installing RubyMotion.
+the [standalone mode](#standalone-mode) section. If not, continue to installing
+RubyMotion.
 
 ## Install RubyMotion
 The status bar app is developed using [RubyMotion](http://www.rubymotion.com/),
 so you'll need to purchase and install it in order to build and run the app
 yourself.
 
-_Don't want to install RubyMotion? Consider running the web app in [standalone
-mode]()._
+_Don't want to install RubyMotion? Consider running the web app in 
+[standalone mode](#standalone-mode)._
 
 ## Run the status bar app
 Once you have RubyMotion installed, run the following:
