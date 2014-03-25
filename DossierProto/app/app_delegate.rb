@@ -23,6 +23,12 @@ class AppDelegate
     # Note, because we're using NSVariableStatusItemLength above, THERE WILL BE
     # NOTHING DISPLAYED IN THE STATUS BAR if there is not a valid image here
     @status_item.setImage(NSImage.imageNamed "menu_bar_icon.png")
+    @status_item.setAlternateImage(NSImage.imageNamed "menu_bar_icon_alt.png")
+
+    # TODO: Make the icon stay highlighted when the menu is open. This can
+    # likely be accomplished by following these links:
+    # http://undefinedvalue.com/2009/07/07/adding-custom-view-nsstatusitem
+    # http://stackoverflow.com/questions/14296522/is-there-any-way-to-highlight-the-status-bar-item-programmatically
 
     @status_item.setTarget(self) #?
 
