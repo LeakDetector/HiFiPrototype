@@ -1,0 +1,150 @@
+/* =============================================================================
+ * main.scss
+ * Author: Dillon Grove
+ * 
+ * This file is repsonsbile for importing all dependencies and providing main
+ * styles. It is the only file ultimately included in the page
+ *
+ * ========================================================================== */
+/* ========== IMPORTS ======================================================= */
+/* line 17, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* =============================================================================
+ * _globals.scss
+ * Author: Dillon Grove
+ * 
+ * Definitions for global SCSS variables. This file is included by main.scss, 
+ * and is not compiled standalone.
+ *
+ * ========================================================================== */
+/* ========== MODES ========================================================= */
+/* ========== COLORS ======================================================== */
+/* ========== SIZING AND LAYOUT ============================================= */
+/* =============================================================================
+ * _animations.scss
+ * Author: Dillon Grove
+ * 
+ * Definitions for all animations and transitions used. This file is included by
+ * main.scss, and is not compiled standalone.
+ *
+ * ========================================================================== */
+/* ========== MODE SWITCHING ================================================ */
+/* line 22, ../sass/main.scss */
+body {
+  background: url('/images/mac_desktop.jpg?1394264102');
+  background-size: cover;
+}
+
+/* line 27, ../sass/main.scss */
+#app_container {
+  position: absolute;
+  top: 40px;
+  right: 400px;
+  -webkit-box-shadow: 0px 0px 20px #333333;
+  -moz-box-shadow: 0px 0px 20px #333333;
+  box-shadow: 0px 0px 20px #333333;
+}
+
+/* line 36, ../sass/main.scss */
+#app_container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+}
+
+/* line 44, ../sass/main.scss */
+#app_mask_wrapper {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  /* What. The. Fuck.
+   * http://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera
+   */
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+/*========== BASIC STYLES =================================================== */
+/* line 55, ../sass/main.scss */
+html {
+  /* prevent webkit and ms mobile browsers from resizing text */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%;
+}
+
+/* line 63, ../sass/main.scss */
+body {
+  font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+  height: 100%;
+}
