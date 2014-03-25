@@ -80,6 +80,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * and is not compiled standalone.
  *
  * ========================================================================== */
+/* ========== MODES ========================================================= */
 /* ========== COLORS ======================================================== */
 /* ========== SIZING AND LAYOUT ============================================= */
 /* =============================================================================
@@ -90,8 +91,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * main.scss, and is not compiled standalone.
  *
  * ========================================================================== */
+/* ========== MODE SWITCHING ================================================ */
+/* line 22, ../sass/main.scss */
+body {
+  background: url('/images/mac_desktop.jpg?1394264102');
+  background-size: cover;
+}
+
+/* line 27, ../sass/main.scss */
+#app_container {
+  position: absolute;
+  top: 40px;
+  right: 400px;
+  -webkit-box-shadow: 0px 0px 20px #333333;
+  -moz-box-shadow: 0px 0px 20px #333333;
+  box-shadow: 0px 0px 20px #333333;
+}
+
+/* line 36, ../sass/main.scss */
+#app_container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+}
+
+/* line 44, ../sass/main.scss */
+#app_mask_wrapper {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  /* What. The. Fuck.
+   * http://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera
+   */
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
 /*========== BASIC STYLES =================================================== */
-/* line 20, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 html {
   /* prevent webkit and ms mobile browsers from resizing text */
   -webkit-text-size-adjust: 100%;
@@ -99,7 +143,7 @@ html {
   height: 100%;
 }
 
-/* line 28, ../sass/main.scss */
+/* line 63, ../sass/main.scss */
 body {
   font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
   height: 100%;
