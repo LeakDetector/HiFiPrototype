@@ -5,9 +5,7 @@ var express = require("express");
 var app = express();
 var constants = require("./constants.js");
 var fs = require("fs");
-
-// This an npm module which includes references to a lot of templating engines
-var templatingEngines = require("consolidate");
+var cons = require("consolidate");
 
 /* ---------- CONFIGURATION ------------------------------------------------- */
 
@@ -16,7 +14,7 @@ app.configure(function(){
     app.use(express.static(path.join(__dirname, "/static")));
 
     // assign the swig templating engine to handle html files
-    app.engine("html", templatingEngines.swig);
+    app.engine("html", cons.swig);
 
     app.set("view engine", "html"); // set .html as the default extension
     app.set("views", path.join(__dirname, "templates")); // set view dir
@@ -24,18 +22,27 @@ app.configure(function(){
     app.set("port", process.env.PORT || 7000);
 });
 
+
 /* ---------- ROUTES -------------------------------------------------------- */
 
 // Home Route
 app.get("/", function(req, res) {
-    getDossier(1, function(err, dossier){
-        console.log(dossier.basics.name);
-        res.render("index.html", dossier.basics.name);
-    });
+    res.render("index.html", dossier.basics.name);
 });
 
-app.get("/dossier", function(req, res){
-    res.render("dossier.html", dossiers.dossier1);
+app.get("/dossier/:id", function(req, res){
+    var dossierID = req.params.id
+    getDossier(dossierID, function(err, dossier){
+        if(err){
+            if(err.code == "ENOENT"){
+                res.send("Dossier doesn't exist!");
+            } else {
+                res.send("Couldn't generate Dossier (possibly malformed JSON?)");
+            }
+        } else {
+            res.render("dossier.html", dossier);
+        }
+    });
 });
 
 
