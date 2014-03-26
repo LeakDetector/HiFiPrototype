@@ -71,11 +71,12 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     @include box-sizing(border-box);
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #019bc6;
+    color: white;
     padding: 12px;
 }
 
