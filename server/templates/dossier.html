@@ -5,66 +5,112 @@
         {% if basics %}
             <div class="section">
                 <h2>Basic Information</h2>
-                <table>
-                    <tr>
-                        <td>Hometown</td>
-                        <td>{{ basics.hometown.city }}, {{ basics.hometown.state }}</td>
-                    </tr>
-                    <tr>
-                        <td>Birthdate</td>
-                        <td>{{ basics.birthdate.month }} {{ basics.birthdate.date }}</td>
-                    </tr>
-                    <tr>
-                        <td>Phone Number</td>
-                        <td>
-                            {% for phone in basics.phone_numbers %}
-                                {{ phone.number }} ({{ phone.type }})
-                            {% endfor %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Email Address</td>
-                        <td>
-                            {% for email in basics.email_addresses %}
-                                {{ email }}
-                            {% endfor %}
-                        </td>
-                    </tr>
-                </table>
+                <div class="section_content">
+                    <table>
+                        <tr>
+                            <td>Hometown</td>
+                            <td>{{ basics.hometown.city }}, {{ basics.hometown.state }}</td>
+                        </tr>
+                        <tr>
+                            <td>Birthdate</td>
+                            <td>{{ basics.birthdate.month }} {{ basics.birthdate.date }}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>
+                                {% for phone in basics.phone_numbers %}
+                                    {{ phone.number }} ({{ phone.type }})
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email Address</td>
+                            <td>
+                                {% for email in basics.email_addresses %}
+                                    {{ email }}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         {% endif %}
 
-        {% if basics %}
+        {% if education %}
             <div class="section">
-                <h2>Basic Information</h2>
-                <table>
-                    <tr>
-                        <td>Hometown</td>
-                        <td>{{ basics.hometown.city }}, {{ basics.hometown.state }}</td>
-                    </tr>
-                    <tr>
-                        <td>Birthdate</td>
-                        <td>{{ basics.birthdate.month }} {{ basics.birthdate.date }}</td>
-                    </tr>
-                    <tr>
-                        <td>Phone Number</td>
-                        <td>
-                            {% for phone in basics.phone_numbers %}
-                                {{ phone.number }} ({{ phone.type }})
-                            {% endfor %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Email Address</td>
-                        <td>
-                            {% for email in basics.email_addresses %}
-                                {{ email }}
-                            {% endfor %}
-                        </td>
-                    </tr>
-                </table>
+                <h2>Education Information</h2>
+                <div class="section_content">
+                    <table>
+                        <tr>
+                            <td>School</td>
+                            <td>{{ education.school }}</td>
+                        </tr>
+                        <tr>
+                            <td>Major</td>
+                            <td>{{ education.major }}</td>
+                        </tr>
+                        <tr>
+                            <td>Grad. Year</td>
+                            <td>{{ education.grad_year }}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         {% endif %}
-        
+
+        {% if work_history %}
+            <div class="section">
+                <h2>Work History</h2>
+                <div class="section_content">
+                {% for position in work_history %}
+                    <div class="position">
+                        <span>{{ position.title }}</span><br>
+                        {{ position.company }}<br>
+                        {{ position.start }}-{{ position.end }}<br>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% if interests %}
+            <div class="section">
+                <h2>Interests</h2>
+                <div class="section_content">
+                    {% for interest in interests %}
+                        {{ interest }}, 
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% if social_accounts %}
+            <div class="section">
+                <h2>Social Accounts</h2>
+                <div class="section_content">
+                    <table>
+                        {% for account in social_accounts %}
+                            <tr>
+                                <td>{{ account.type }}</td>
+                                <td>{{ account.url }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if previous_known_addresses %}
+            <div class="section">
+                <h2>Previous Known Addresses</h2>
+                <div class="section_content">
+                    {% for address in previous_known_addresses %}
+                        {{ address.street_address }}<br>
+                        {{ address.city }}, {{ address.state }} {{ address.zip}}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
     </div>
 {% endblock %}
