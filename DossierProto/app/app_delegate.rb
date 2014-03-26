@@ -2,10 +2,10 @@ class AppDelegate
   attr_accessor :status_menu
   
   # Popup sizing variables
-  POPUP_WIDTH = 300
-  POPUP_HEIGHT = 300
+  POPUP_WIDTH = 400
+  POPUP_HEIGHT = 500
   ARROW_HEIGHT = 12
-  WEB_VIEW_URL = "http://localhost:7000"
+  WEB_VIEW_URL = "http://localhost:7000/dossier/1"
 
   # Runs when the application launches (basically this is "main")
   def applicationDidFinishLaunching(notification)

@@ -92,22 +92,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  *
  * ========================================================================== */
 /* ========== MODE SWITCHING ================================================ */
-/* line 22, ../sass/main.scss */
-body {
-  background: url('/images/mac_desktop.jpg?1394264102');
-  background-size: cover;
-}
-
-/* line 27, ../sass/main.scss */
-#app_container {
-  position: absolute;
-  top: 40px;
-  right: 400px;
-  -webkit-box-shadow: 0px 0px 20px #333333;
-  -moz-box-shadow: 0px 0px 20px #333333;
-  box-shadow: 0px 0px 20px #333333;
-}
-
 /* line 36, ../sass/main.scss */
 #app_container {
   width: 400px;
