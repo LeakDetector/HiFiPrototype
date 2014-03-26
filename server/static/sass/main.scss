@@ -36,9 +36,9 @@
 #app_container {
     width: $app_width;
     height: $app_height;
-    overflow: hidden;
+    overflow-y: scroll;
     @include border-radius($app_border_radius);
-    background-color: #eaeaea;
+    background-color: white;
 }
 
 #app_mask_wrapper {
@@ -63,4 +63,71 @@ html {
 body {
     font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     height: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+    @include box-sizing(border-box);
+    width: 100%;
+    background-color: #019bc6;
+    color: white;
+    padding: 12px;
+}
+
+table {
+    width: 100%;
+    margin-top: -6px;
+    margin-bottom: -6px;
+}
+
+td {
+    padding: 6px 0px;
+
+    &:first-child {
+        font-weight: bold;
+    }
+}
+
+.dossier {
+    padding: 18px;
+}
+
+.top_section {
+    text-align: center;
+
+    img {
+        display: inline-block;
+        @include border-radius(50%);
+        width: 140px;
+        height: 140px;
+        margin-bottom: 12px;
+    }
+}
+
+.section {
+    @include border-radius(4px);
+    overflow: hidden;
+    background-color: #eaeaea;
+    margin-bottom: 16px;
+}
+
+.section_content {
+    padding: 12px 12px;
+    font-size: 14px;
+}
+
+.position {
+    padding: 4px 0px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+
+    span {
+        font-weight: bold;
+    }
 }
