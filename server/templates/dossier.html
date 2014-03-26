@@ -1,35 +1,70 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% if basics %}
-        <div class="section">
-            <h2>Basic Information</h2>
-            <table>
-                <tr>
-                    <td>Hometown</td>
-                    <td>{{ basics.hometown.city }}, {{ basics.hometown.state }}</td>
-                </tr>
-                <tr>
-                    <td>Birthdate</td>
-                    <td>{{ basics.birthdate.month }} {{ basics.birthdate.date }}</td>
-                </tr>
-                <tr>
-                    <td>Phone Number</td>
-                    <td>
-                        {% for phone in basics.phone_numbers %}
-                            {{ phone.number }} ({{ phone.type }})
-                        {% endfor %}
-                    </td>
-                </tr>
-                <tr>
-                    <td>Email Address</td>
-                    <td>
-                        {% for email in basics.email_addresses %}
-                            {{ email }}
-                        {% endfor %}
-                    </td>
-                </tr>
-            </table>
-        </div>
-    {% endif %}
+    <div class="dossier">
+        {% if basics %}
+            <div class="section">
+                <h2>Basic Information</h2>
+                <table>
+                    <tr>
+                        <td>Hometown</td>
+                        <td>{{ basics.hometown.city }}, {{ basics.hometown.state }}</td>
+                    </tr>
+                    <tr>
+                        <td>Birthdate</td>
+                        <td>{{ basics.birthdate.month }} {{ basics.birthdate.date }}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td>
+                            {% for phone in basics.phone_numbers %}
+                                {{ phone.number }} ({{ phone.type }})
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td>
+                            {% for email in basics.email_addresses %}
+                                {{ email }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endif %}
+
+        {% if basics %}
+            <div class="section">
+                <h2>Basic Information</h2>
+                <table>
+                    <tr>
+                        <td>Hometown</td>
+                        <td>{{ basics.hometown.city }}, {{ basics.hometown.state }}</td>
+                    </tr>
+                    <tr>
+                        <td>Birthdate</td>
+                        <td>{{ basics.birthdate.month }} {{ basics.birthdate.date }}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td>
+                            {% for phone in basics.phone_numbers %}
+                                {{ phone.number }} ({{ phone.type }})
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td>
+                            {% for email in basics.email_addresses %}
+                                {{ email }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endif %}
+        
+    </div>
 {% endblock %}

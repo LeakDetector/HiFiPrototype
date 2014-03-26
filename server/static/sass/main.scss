@@ -38,7 +38,7 @@
     height: $app_height;
     overflow: hidden;
     @include border-radius($app_border_radius);
-    background-color: #eaeaea;
+    background-color: white;
 }
 
 #app_mask_wrapper {
@@ -63,4 +63,43 @@ html {
 body {
     font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     height: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    @include box-sizing(border-box);
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 6px 10px;
+    font-size: 14px;
+
+    &:first-child {
+        font-weight: bold;
+    }
+}
+
+.dossier {
+    padding: 18px;
+}
+
+.section {
+    @include border-radius(4px);
+    overflow: hidden;
+    background-color: #eaeaea;
+    padding-bottom: 4px;
+    margin-bottom: 16px;
 }

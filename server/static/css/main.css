@@ -110,15 +110,15 @@ body {
 
 /* line 36, ../sass/main.scss */
 #app_container {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 500px;
   overflow: hidden;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  background-color: #eaeaea;
+  background-color: white;
 }
 
 /* line 44, ../sass/main.scss */
@@ -147,4 +147,55 @@ html {
 body {
   font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
   height: 100%;
+}
+
+/* line 68, ../sass/main.scss */
+h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+/* line 73, ../sass/main.scss */
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #e0e0e0;
+  padding: 10px;
+}
+
+/* line 82, ../sass/main.scss */
+table {
+  width: 100%;
+}
+
+/* line 86, ../sass/main.scss */
+td {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+/* line 90, ../sass/main.scss */
+td:first-child {
+  font-weight: bold;
+}
+
+/* line 95, ../sass/main.scss */
+.dossier {
+  padding: 18px;
+}
+
+/* line 99, ../sass/main.scss */
+.section {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #eaeaea;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
 }
