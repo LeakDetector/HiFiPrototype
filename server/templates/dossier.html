@@ -2,6 +2,13 @@
 
 {% block content %}
     <div class="dossier">
+        <div class="top_section">
+        {% if images %}
+            <img class="primary_img" src="{{ images.primary }}"/>
+        {% endif %}
+        <h1>{{ basics.name.first }} {{ basics.name.last }}</h1>
+        </div>
+
         {% if basics %}
             <div class="section">
                 <h2>Basic Information</h2>

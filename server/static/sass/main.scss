@@ -97,6 +97,18 @@ td {
     padding: 18px;
 }
 
+.top_section {
+    text-align: center;
+
+    img {
+        display: inline-block;
+        @include border-radius(50%);
+        width: 140px;
+        height: 140px;
+        margin-bottom: 12px;
+    }
+}
+
 .section {
     @include border-radius(4px);
     overflow: hidden;
