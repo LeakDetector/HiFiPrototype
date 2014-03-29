@@ -1,0 +1,54 @@
+{% macro info_single(prop, value) %}
+    <tr>
+        <td>{{ prop }}</td>
+        <td>{{ value }}</td>
+    </tr>
+{% endmacro %}
+
+{% macro phone_numbers(phones) %}
+    <tr>
+        <td>Phone Numbers</td>
+        <td>
+            {% for phone in phones %}
+                {{ phone.number }} ({{ phone.type }})<br>
+            {% endfor %}
+        </td>
+    </tr>
+{% endmacro %}
+
+{% macro email_addresses(emails) %}
+    <tr>
+        <td>Email Address</td>
+        <td>
+            {% for email in emails %}
+                {{ email }}<br>
+            {% endfor %}
+        </td>
+    </tr>
+{% endmacro %}
+
+{% macro work(work_history) %}
+    {% for position in work_history %}
+        <div class="position">
+            <span>{{ position.title }}</span><br>
+            {{ position.company }}<br>
+            {{ position.start }}-{{ position.end }}<br>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% macro social(social_accounts) %}
+    {% for account in social_accounts %}
+        <tr>
+            <td>{{ account.type }}</td>
+            <td>{{ account.url }}</td>
+        </tr>
+    {% endfor %}
+{% endmacro %}
+
+{% macro address_list(addresses) %}
+    {% for address in addresses %}
+        {{ address.street_address }}<br>
+        {{ address.city }}, {{ address.state }} {{ address.zip}}
+    {% endfor %}
+{% endmacro %}

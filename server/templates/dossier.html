@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% import "./macros.html" as m %}
+
 {% block content %}
     <div class="dossier">
         <div class="top_section">
@@ -14,30 +16,10 @@
                 <h2>Basic Information</h2>
                 <div class="section_content">
                     <table>
-                        <tr>
-                            <td>Hometown</td>
-                            <td>{{ basics.hometown.city }}, {{ basics.hometown.state }}</td>
-                        </tr>
-                        <tr>
-                            <td>Birthdate</td>
-                            <td>{{ basics.birthdate.month }} {{ basics.birthdate.date }}</td>
-                        </tr>
-                        <tr>
-                            <td>Phone Number</td>
-                            <td>
-                                {% for phone in basics.phone_numbers %}
-                                    {{ phone.number }} ({{ phone.type }})
-                                {% endfor %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Email Address</td>
-                            <td>
-                                {% for email in basics.email_addresses %}
-                                    {{ email }}
-                                {% endfor %}
-                            </td>
-                        </tr>
+                        {{ m.info_single("Hometown", basics.hometown.city + ", " + basics.hometown.state ) }}
+                        {{ m.info_single("Birthdate", basics.birthdate.month + " " + basics.birthdate.date ) }}
+                        {{ m.phone_numbers(basics.phone_numbers) }}
+                        {{ m.email_addresses(basics.email_addresses) }}
                     </table>
                 </div>
             </div>
@@ -48,18 +30,9 @@
                 <h2>Education Information</h2>
                 <div class="section_content">
                     <table>
-                        <tr>
-                            <td>School</td>
-                            <td>{{ education.school }}</td>
-                        </tr>
-                        <tr>
-                            <td>Major</td>
-                            <td>{{ education.major }}</td>
-                        </tr>
-                        <tr>
-                            <td>Grad. Year</td>
-                            <td>{{ education.grad_year }}</td>
-                        </tr>
+                        {{ m.info_single("School", education.school) }}
+                        {{ m.info_single("Major", education.major) }}
+                        {{ m.info_single("Grad. Year", education.grad_year) }}
                     </table>
                 </div>
             </div>
@@ -69,13 +42,7 @@
             <div class="section">
                 <h2>Work History</h2>
                 <div class="section_content">
-                {% for position in work_history %}
-                    <div class="position">
-                        <span>{{ position.title }}</span><br>
-                        {{ position.company }}<br>
-                        {{ position.start }}-{{ position.end }}<br>
-                    </div>
-                {% endfor %}
+                    {{ m.work(work_history) }}
                 </div>
             </div>
         {% endif %}
@@ -84,9 +51,7 @@
             <div class="section">
                 <h2>Interests</h2>
                 <div class="section_content">
-                    {% for interest in interests %}
-                        {{ interest }}, 
-                    {% endfor %}
+                    {{ interests|join(", ") }}
                 </div>
             </div>
         {% endif %}
@@ -96,12 +61,7 @@
                 <h2>Social Accounts</h2>
                 <div class="section_content">
                     <table>
-                        {% for account in social_accounts %}
-                            <tr>
-                                <td>{{ account.type }}</td>
-                                <td>{{ account.url }}</td>
-                            </tr>
-                        {% endfor %}
+                        {{ m.social(social_accounts) }}
                     </table>
                 </div>
             </div>
@@ -111,10 +71,7 @@
             <div class="section">
                 <h2>Previous Known Addresses</h2>
                 <div class="section_content">
-                    {% for address in previous_known_addresses %}
-                        {{ address.street_address }}<br>
-                        {{ address.city }}, {{ address.state }} {{ address.zip}}
-                    {% endfor %}
+                    {{ m.address_list(previous_known_addresses) }}
                 </div>
             </div>
         {% endif %}
