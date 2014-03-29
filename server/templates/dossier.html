@@ -9,18 +9,17 @@
             <img class="primary_img" src="{{ images.primary }}"/>
         {% endif %}
         <h1>{{ basics.name.first }} {{ basics.name.last }}</h1>
+        {{ m.meta_info(basics.name.meta) }}
         </div>
 
         {% if basics %}
             <div class="section">
                 <h2>Basic Information</h2>
                 <div class="section_content">
-                    <table>
-                        {{ m.info_single("Hometown", basics.hometown.city + ", " + basics.hometown.state ) }}
-                        {{ m.info_single("Birthdate", basics.birthdate.month + " " + basics.birthdate.date ) }}
-                        {{ m.phone_numbers(basics.phone_numbers) }}
-                        {{ m.email_addresses(basics.email_addresses) }}
-                    </table>
+                    {{ m.info_single("Hometown", basics.hometown.city + ", " + basics.hometown.state, basics.hometown.meta ) }}
+                    {{ m.info_single("Birthdate", basics.birthdate.month + " " + basics.birthdate.date, basics.birthdate.meta ) }}
+                    {{ m.phone_numbers(basics.phone_numbers) }}
+                    {{ m.email_addresses(basics.email_addresses) }}
                 </div>
             </div>
         {% endif %}

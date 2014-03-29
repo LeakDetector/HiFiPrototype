@@ -80,6 +80,7 @@ h2 {
     padding: 12px;
 }
 
+/*
 table {
     width: 100%;
     margin-top: -6px;
@@ -92,6 +93,36 @@ td {
     &:first-child {
         font-weight: bold;
     }
+}
+*/
+
+.info {
+    padding: 10px $section_content_padding;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+}
+
+.prop {
+    font-weight: bold;
+    float: left;
+    width: 140px;
+}
+
+.value {
+    float: left;
+}
+
+.meta {
+    display: none;
+    padding: 16px $section_content_padding;
+    color: #222;
+    background-color: #ccc;
+    font-style: italic;
+    @include box-shadow(inset 0px 2px 4px #aaa);
 }
 
 .dossier {
@@ -118,7 +149,6 @@ td {
 }
 
 .section_content {
-    padding: 12px 12px;
     font-size: 14px;
 }
 
