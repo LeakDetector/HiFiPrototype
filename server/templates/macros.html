@@ -1,0 +1,70 @@
+{% macro info_single(prop, value, meta) %}
+    <div class="info_wrapper">
+        <div class="info">
+            <div class="prop">{{ prop }}</div>
+            <div class="value">{{ value }}</div>
+        </div>
+        {{ m.meta_info(meta) }}
+    </div>
+{% endmacro %}
+
+{% macro phone_numbers(phones) %}
+    <div class="info_wrapper">
+        <div class="info">
+            <div class="prop">Phone Numbers</div>
+            <div class="value">
+                {% for phone in phones %}
+                    {{ phone.number }} ({{ phone.type }})<br>
+                {% endfor %} 
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro email_addresses(emails) %}
+    <div class="info_wrapper">
+        <div class="info">
+            <div class="prop">Email Addresses</div>
+            <div class="value">
+                {% for email in emails %}
+                    {{ email }}<br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro work(work_history) %}
+    {% for position in work_history %}
+        <div class="position">
+            <span>{{ position.title }}</span><br>
+            {{ position.company }}<br>
+            {{ position.start }}-{{ position.end }}<br>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% macro social(social_accounts) %}
+    {% for account in social_accounts %}
+        <tr>
+            <td>{{ account.type }}</td>
+            <td>{{ account.url }}</td>
+        </tr>
+    {% endfor %}
+{% endmacro %}
+
+{% macro address_list(addresses) %}
+    {% for address in addresses %}
+        {{ address.street_address }}<br>
+        {{ address.city }}, {{ address.state }} {{ address.zip}}
+    {% endfor %}
+{% endmacro %}
+
+{% macro meta_info(meta) %}
+    {% if meta %}
+        <div class="meta">
+                {{ meta.source }}
+                {{ meta.fix }}
+        </div>
+    {% endif %}
+{% endmacro %}

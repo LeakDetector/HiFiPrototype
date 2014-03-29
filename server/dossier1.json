@@ -7,15 +7,27 @@
         "name": {
             "first": "Indra",
             "last": "Szegedy",
-            "maiden": "Dtantirojanarat"
+            "maiden": "Dtantirojanarat",
+            "meta": {
+                "source": "Found in communication with www.bing.com",
+                "fix": "Use a VPN or Proxy Service to hide your communications when on a public wireless network"
+            }
         },
         "hometown": {
             "city": "New York",
-            "state": "NY"
+            "state": "NY",
+            "meta": {
+                "source": "Found on our public Facebook profile",
+                "fix": "Improve your privacy settings on Facebook"
+            }
         },
         "birthdate": {
             "month": "June",
-            "day": "6th"
+            "day": "6th",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         },
         "phone_numbers": [
             {

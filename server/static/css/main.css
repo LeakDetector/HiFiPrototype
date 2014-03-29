@@ -152,32 +152,66 @@ h2 {
   padding: 12px;
 }
 
-/* line 83, ../sass/main.scss */
+/*
 table {
-  width: 100%;
-  margin-top: -6px;
-  margin-bottom: -6px;
+    width: 100%;
+    margin-top: -6px;
+    margin-bottom: -6px;
 }
 
-/* line 89, ../sass/main.scss */
 td {
-  padding: 6px 0px;
+    padding: 6px 0px;
+
+    &:first-child {
+        font-weight: bold;
+    }
 }
-/* line 92, ../sass/main.scss */
-td:first-child {
-  font-weight: bold;
+*/
+/* line 99, ../sass/main.scss */
+.info {
+  padding: 10px 12px;
+  overflow: hidden;
+}
+/* line 103, ../sass/main.scss */
+.info:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
+.prop {
+  font-weight: bold;
+  float: left;
+  width: 140px;
+}
+
+/* line 115, ../sass/main.scss */
+.value {
+  float: left;
+}
+
+/* line 119, ../sass/main.scss */
+.meta {
+  display: none;
+  padding: 16px 12px;
+  color: #222;
+  background-color: #ccc;
+  font-style: italic;
+  -webkit-box-shadow: inset 0px 2px 4px #aaaaaa;
+  -moz-box-shadow: inset 0px 2px 4px #aaaaaa;
+  box-shadow: inset 0px 2px 4px #aaaaaa;
+}
+
+/* line 128, ../sass/main.scss */
 .dossier {
   padding: 18px;
 }
 
-/* line 101, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 .top_section {
   text-align: center;
 }
-/* line 104, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .top_section img {
   display: inline-block;
   -webkit-border-radius: 50%;
@@ -190,7 +224,7 @@ td:first-child {
   margin-bottom: 12px;
 }
 
-/* line 113, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 .section {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -202,19 +236,18 @@ td:first-child {
   margin-bottom: 16px;
 }
 
-/* line 120, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .section_content {
-  padding: 12px 12px;
   font-size: 14px;
 }
 
-/* line 125, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .position {
   padding: 4px 0px;
   line-height: 1.3;
   margin-bottom: 4px;
 }
-/* line 130, ../sass/main.scss */
+/* line 160, ../sass/main.scss */
 .position span {
   font-weight: bold;
 }
