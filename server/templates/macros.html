@@ -13,11 +13,12 @@
         <div class="info">
             <div class="prop">Phone Numbers</div>
             <div class="value">
-                {% for phone in phones %}
+                {% for phone in phones.numbers %}
                     {{ phone.number }} ({{ phone.type }})<br>
                 {% endfor %} 
             </div>
         </div>
+        {{ m.meta_info(phones.meta) }}
     </div>
 {% endmacro %}
 
@@ -26,37 +27,60 @@
         <div class="info">
             <div class="prop">Email Addresses</div>
             <div class="value">
-                {% for email in emails %}
+                {% for email in emails.emails %}
                     {{ email }}<br>
                 {% endfor %}
             </div>
         </div>
+        {{ m.meta_info(emails.meta) }}
     </div>
 {% endmacro %}
 
 {% macro work(work_history) %}
     {% for position in work_history %}
-        <div class="position">
-            <span>{{ position.title }}</span><br>
-            {{ position.company }}<br>
-            {{ position.start }}-{{ position.end }}<br>
+        <div class="info_wrapper">
+            <div class="info position">
+                <span>{{ position.title }}</span><br>
+                {{ position.company }}<br>
+                {{ position.start }}-{{ position.end }}<br>
+            </div>
+            {{ m.meta_info(position.meta) }}
         </div>
     {% endfor %}
 {% endmacro %}
 
+{% macro interest_list(interests) %}
+    <div class="info_wrapper">
+        <div class="info">
+            {% for interest in interests.list %}
+                {% if loop.last %}
+                    {{ interest }}
+                {% else %}
+                    {{ interest }}, 
+                {% endif %}
+            {% endfor %}
+        </div>
+        {{ m.meta_info(interests.meta) }}
+    </div>
+{% endmacro %}
+
 {% macro social(social_accounts) %}
+    
     {% for account in social_accounts %}
-        <tr>
-            <td>{{ account.type }}</td>
-            <td>{{ account.url }}</td>
-        </tr>
+        {{ m.info_single(account.type, account.url, account.meta)}}
     {% endfor %}
+
 {% endmacro %}
 
 {% macro address_list(addresses) %}
     {% for address in addresses %}
-        {{ address.street_address }}<br>
-        {{ address.city }}, {{ address.state }} {{ address.zip}}
+        <div class="info_wrapper">
+            <div class="info">
+                {{ address.street_address }}<br>
+                {{ address.city }}, {{ address.state }} {{ address.zip}}
+            </div>
+            {{ m.meta_info(address.meta)}}
+        </div>
     {% endfor %}
 {% endmacro %}
 

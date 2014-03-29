@@ -28,11 +28,9 @@
             <div class="section">
                 <h2>Education Information</h2>
                 <div class="section_content">
-                    <table>
-                        {{ m.info_single("School", education.school) }}
-                        {{ m.info_single("Major", education.major) }}
-                        {{ m.info_single("Grad. Year", education.grad_year) }}
-                    </table>
+                    {{ m.info_single("School", education.school, education.meta) }}
+                    {{ m.info_single("Major", education.major, education.meta) }}
+                    {{ m.info_single("Grad. Year", education.grad_year, education.meta) }}
                 </div>
             </div>
         {% endif %}
@@ -50,7 +48,7 @@
             <div class="section">
                 <h2>Interests</h2>
                 <div class="section_content">
-                    {{ interests|join(", ") }}
+                    {{ m.interest_list(interests) }}
                 </div>
             </div>
         {% endif %}

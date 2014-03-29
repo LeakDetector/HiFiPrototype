@@ -169,7 +169,7 @@ td {
 */
 /* line 99, ../sass/main.scss */
 .info {
-  padding: 10px 12px;
+  padding: 8px 12px;
   overflow: hidden;
 }
 /* line 103, ../sass/main.scss */
@@ -239,15 +239,16 @@ td {
 /* line 151, ../sass/main.scss */
 .section_content {
   font-size: 14px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
-/* line 155, ../sass/main.scss */
+/* line 157, ../sass/main.scss */
 .position {
-  padding: 4px 0px;
   line-height: 1.3;
   margin-bottom: 4px;
 }
-/* line 160, ../sass/main.scss */
+/* line 161, ../sass/main.scss */
 .position span {
   font-weight: bold;
 }
