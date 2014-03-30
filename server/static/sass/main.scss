@@ -192,3 +192,20 @@ td {
         width: 100px;
     }
 }
+
+.section-education {
+    .school {
+        line-height: 1.3;
+        margin-bottom: 4px;
+    }
+
+    .school_name {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .prop {
+        width: auto;
+        margin-right: 4px;
+    }
+}

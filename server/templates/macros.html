@@ -49,6 +49,31 @@
     {% endfor %}
 {% endmacro %}
 
+{% macro education_info(education) %}
+    {% for school in education.schools %}
+        <div class="info_wrapper">
+            <div class="info school">
+                {% if school.type == "college" %}
+                    <div class="school_name">{{ school.name }}</div>
+                    <div class="prop">Major: </div>
+                    <div class="value">{{ school.major }}</div><br>
+                    {% if school.minors %}
+                        <div class="prop">Minors: </div>
+                        <div class="value">{{ school.minors|join(", ") }}</div><br>
+                    {% endif %}
+                    <div class="prop">Graduating Year: </div>
+                    <div class="value">{{ school.grad_year }}</div>
+                {% else %}
+                    <div class="school_name">{{ school.name }}</div>
+                    <div class="prop">Graduating Year: </div>
+                    <div class="value">{{ school.grad_year }}</div>
+                {% endif %}
+            </div>
+            {{ m.meta_info(school.meta) }}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
 {% macro interest_list(interests) %}
     <div class="info_wrapper">
         <div class="info">

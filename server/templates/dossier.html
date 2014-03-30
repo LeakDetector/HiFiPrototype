@@ -45,9 +45,7 @@
                 <div class="section section-education">
                     <h2>Education Information</h2>
                     <div class="section_content">
-                        {{ m.info_single("School", education.school, education.meta) }}
-                        {{ m.info_single("Major", education.major, education.meta) }}
-                        {{ m.info_single("Grad. Year", education.grad_year, education.meta) }}
+                        {{ m.education_info(education) }}
                     </div>
                 </div>
             {% endif %}
