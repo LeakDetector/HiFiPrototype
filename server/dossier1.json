@@ -1,4 +1,5 @@
 {
+    "visible": false,
     "images": {
         "primary": "/images/indra.png",
         "others": []

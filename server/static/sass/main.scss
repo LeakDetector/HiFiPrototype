@@ -101,34 +101,7 @@ td {
     }
 }
 */
-
-.info {
-    padding: 8px $section_content_padding;
-    overflow: hidden;
-
-    &:hover {
-        background-color: #f0f0f0;
-        cursor: pointer;
-    }
-}
-
-.prop {
-    font-weight: bold;
-    float: left;
-    width: 140px;
-}
-
-.value {
-    float: left;
-}
-
-.meta {
-    display: none;
-    padding: 16px $section_content_padding;
-    color: #444;
-    background-color: #F0F0F0;
-    font-style: italic;
-}
+/*========== PRIMARY LAYOUT ================================================= */
 
 .dossier {
     padding: 18px;
@@ -158,6 +131,45 @@ td {
     padding-top: 3px;
     padding-bottom: 3px;
 }
+
+/*========== NOT READY YET STYLES =========================================== */
+
+.not_ready_message {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/*========== INFO BLOCKS ==================================================== */
+
+.info {
+    padding: 8px $section_content_padding;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+}
+
+.prop {
+    font-weight: bold;
+    float: left;
+    width: 140px;
+}
+
+.value {
+    float: left;
+}
+
+.meta {
+    display: none;
+    padding: 16px $section_content_padding;
+    color: #444;
+    background-color: #F0F0F0;
+    font-style: italic;
+}
+
+/*========== SECTION SPECIFIC STYLES ======================================== */
 
 .position {
     line-height: 1.3;
