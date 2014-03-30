@@ -66,12 +66,13 @@ html {
 }
 
 body {
-    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", "HelveticaNeue", Arial, Helvetica, sans-serif;
     height: 100%;
 }
 
 h1 {
     font-size: 32px;
+    font-weight: 100;
     margin-bottom: 16px;
 }
 
@@ -137,6 +138,11 @@ td {
 .not_ready_message {
     text-align: center;
     margin-top: 100px;
+
+    p {
+        font-weight: 100;
+        font-style: italic;
+    }
 }
 
 /*========== INFO BLOCKS ==================================================== */
