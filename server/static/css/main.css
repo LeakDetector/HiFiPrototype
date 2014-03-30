@@ -270,22 +270,27 @@ td {
   font-weight: bold;
 }
 
-/* line 191, ../sass/main.scss */
+/* line 190, ../sass/main.scss */
+.address {
+  line-height: 1.3;
+}
+
+/* line 195, ../sass/main.scss */
 .section-social_accounts .prop {
   width: 100px;
 }
 
-/* line 197, ../sass/main.scss */
+/* line 201, ../sass/main.scss */
 .section-education .school {
   line-height: 1.3;
   margin-bottom: 4px;
 }
-/* line 202, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 .section-education .school_name {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 207, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 .section-education .prop {
   width: auto;
   margin-right: 4px;

@@ -48,6 +48,16 @@
                 "source": "Source",
                 "fix": "Fix"
             }
+        },
+        "current_address": {
+            "street_address": "430 Waterside Drive",
+            "city": "Virgina Beach",
+            "state": "VA",
+            "zip": "23452",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         }
     },
     "physical_traits": {
@@ -150,5 +160,12 @@
                 "fix": "Fix"
             }
         }
-    ]
+    ],
+    "other_known_locations": {
+        "locations": ["Shanghai, China", "London, United Kingdom"],
+        "meta": {
+            "source": "Source",
+            "fix": "Fix"
+        }
+    }
 }

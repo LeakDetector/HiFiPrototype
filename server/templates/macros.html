@@ -101,12 +101,39 @@
     {% for address in addresses %}
         <div class="info_wrapper">
             <div class="info">
-                {{ address.street_address }}<br>
-                {{ address.city }}, {{ address.state }} {{ address.zip}}
+                {{ m.address_format(address) }}
             </div>
             {{ m.meta_info(address.meta)}}
         </div>
     {% endfor %}
+{% endmacro %}
+
+{% macro current_address(address) %}
+    <div class="info_wrapper">
+        <div class="info">
+            <div class="prop">Current Address</div>
+            <div class="value">{{ m.address_format(address) }}</div>
+        </div>
+        {{ m.meta_info(address.meta)}}
+    </div>
+{% endmacro %}
+
+{% macro address_format(address) %}
+    <div class="address">
+        {{ address.street_address }}<br>
+        {{ address.city }}, {{ address.state }} {{ address.zip}}
+    </div>
+{% endmacro %}
+
+{% macro other_locations(locations) %}
+    <div class="info_wrapper">
+        <div class="info">
+            {% for location in locations.locations %}
+                {{ location }}<br>
+            {% endfor %}
+        </div>
+        {{ m.meta_info(locations.meta)}}
+    </div>
 {% endmacro %}
 
 {% macro meta_info(meta) %}

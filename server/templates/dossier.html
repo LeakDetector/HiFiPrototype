@@ -27,6 +27,7 @@
                         {{ m.info_single("Birthdate", basics.birthdate.month + " " + basics.birthdate.date, basics.birthdate.meta ) }}
                         {{ m.phone_numbers(basics.phone_numbers) }}
                         {{ m.email_addresses(basics.email_addresses) }}
+                        {{ m.current_address(basics.current_address) }}
                     </div>
                 </div>
             {% endif %}
@@ -82,6 +83,15 @@
                     <h2>Previous Known Addresses</h2>
                     <div class="section_content">
                         {{ m.address_list(previous_known_addresses) }}
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if other_known_locations %}
+                <div class="section section-other_known_locations">
+                    <h2>Other Known Locations</h2>
+                    <div class="section_content">
+                        {{ m.other_locations(other_known_locations) }}
                     </div>
                 </div>
             {% endif %}
