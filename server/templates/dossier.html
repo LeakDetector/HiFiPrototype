@@ -31,6 +31,16 @@
                 </div>
             {% endif %}
 
+            {% if physical_traits %}
+                <div class="section section-physical_traits">
+                    <h2>Physical Traits</h2>
+                    <div class="section_content">
+                        {{ m.info_single("Height", physical_traits.height, physical_traits.meta )}}
+                        {{ m.info_single("Weight", physical_traits.weight, physical_traits.meta )}}
+                    </div>
+                </div>
+            {% endif %}
+
             {% if education %}
                 <div class="section section-education">
                     <h2>Education Information</h2>

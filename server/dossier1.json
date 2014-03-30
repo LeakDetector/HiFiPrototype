@@ -50,6 +50,14 @@
             }
         }
     },
+    "physical_traits": {
+        "height": "5 feet 9 inches",
+        "weight": "135 lbs",
+        "meta": {
+            "source": "Source",
+            "fix": "Fix"
+        }
+    },
     "education": {
         "school": "Carnegie Mellon University",
         "major": "Chemistry",
