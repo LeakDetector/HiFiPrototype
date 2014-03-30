@@ -78,6 +78,15 @@
                 </div>
             {% endif %}
 
+            {% if organizations %}
+                <div class="section section-organizations">
+                    <h2>Organizations</h2>
+                    <div class="section_content">
+                        {{ m.orgs(organizations) }}
+                    </div>
+                </div>
+            {% endif %}
+
             {% if previous_known_addresses %}
                 <div class="section section-previous_known_addresses">
                     <h2>Previous Known Addresses</h2>

@@ -136,6 +136,17 @@
     </div>
 {% endmacro %}
 
+{% macro orgs(organizations) %}
+    {% for org in organizations %}
+        <div class="info_wrapper">
+            <div class="info">
+                {{ org.name }} ({{ org.position|default("Member")}})
+            </div>
+            {{ m.meta_info(org.meta) }}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
 {% macro meta_info(meta) %}
     {% if meta %}
         <div class="meta">

@@ -167,5 +167,22 @@
             "source": "Source",
             "fix": "Fix"
         }
-    }
+    },
+    "organizations": [
+        {
+            "name": "Cool Club",
+            "position": "President",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
+        },
+        {
+            "name": "Alpha Beta What",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
+        }
+    ]
 }
