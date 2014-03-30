@@ -12,15 +12,15 @@
     {% else %}
         <div class="dossier">
             <div class="top_section">
+            <h1>{{ basics.name.first }} {{ basics.name.last }}</h1>
             {% if images %}
                 <img class="primary_img" src="{{ images.primary }}"/>
             {% endif %}
-            <h1>{{ basics.name.first }} {{ basics.name.last }}</h1>
             {{ m.meta_info(basics.name.meta) }}
             </div>
 
             {% if basics %}
-                <div class="section">
+                <div class="section section-basics">
                     <h2>Basic Information</h2>
                     <div class="section_content">
                         {{ m.info_single("Hometown", basics.hometown.city + ", " + basics.hometown.state, basics.hometown.meta ) }}
@@ -32,7 +32,7 @@
             {% endif %}
 
             {% if education %}
-                <div class="section">
+                <div class="section section-education">
                     <h2>Education Information</h2>
                     <div class="section_content">
                         {{ m.info_single("School", education.school, education.meta) }}
@@ -43,7 +43,7 @@
             {% endif %}
 
             {% if work_history %}
-                <div class="section">
+                <div class="section section-work_history">
                     <h2>Work History</h2>
                     <div class="section_content">
                         {{ m.work(work_history) }}
@@ -52,7 +52,7 @@
             {% endif %}
 
             {% if interests %}
-                <div class="section">
+                <div class="section section-interests">
                     <h2>Interests</h2>
                     <div class="section_content">
                         {{ m.interest_list(interests) }}
@@ -61,7 +61,7 @@
             {% endif %}
 
             {% if social_accounts %}
-                <div class="section">
+                <div class="section section-social_accounts">
                     <h2>Social Accounts</h2>
                     <div class="section_content">
                         {{ m.social(social_accounts) }}
@@ -70,7 +70,7 @@
             {% endif %}
 
             {% if previous_known_addresses %}
-                <div class="section">
+                <div class="section section-previous_known_addresses">
                     <h2>Previous Known Addresses</h2>
                     <div class="section_content">
                         {{ m.address_list(previous_known_addresses) }}

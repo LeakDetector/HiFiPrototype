@@ -109,14 +109,15 @@ td {
 }
 
 .top_section {
-    text-align: center;
 
     img {
         display: inline-block;
-        @include border-radius(50%);
         width: 140px;
         height: 140px;
         margin-bottom: 12px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        @include box-shadow(0px 2px 6px #ccc);
     }
 }
 
@@ -183,5 +184,11 @@ td {
 
     span {
         font-weight: bold;
+    }
+}
+
+.section-social_accounts {
+    .prop {
+        width: 100px;
     }
 }
