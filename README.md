@@ -1,6 +1,9 @@
 # Leak Detector HiFiPrototype
 A high fidelity prototype for the Leak Detector utility.
 
+__NOTE: Large portions of this are no logner valid after the server was split
+out into a separate repo. Will update documentation soon__
+
 ## Introduction
 There are two main components to this prototype, a native __mac status bar app__
 (created with RubyMotion) and a simple __web app__ (created with node and
