@@ -10,7 +10,13 @@ end
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
-  app.name = 'DossierProto'
+  app.name = 'Leak Detector Prototype'
+
+  # Specify what SDK version to use when compiling
+  app.sdk_version = "10.9"
+
+  # And specify what versions of OS X we want to support
+  app.deployment_target = "10.7"
 
   app.frameworks = ['Foundation', 'AppKit', 'CoreGraphics', 'WebKit']
 
