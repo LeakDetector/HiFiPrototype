@@ -3,7 +3,7 @@ class AppDelegate
   
   # Popup sizing variables
   POPUP_WIDTH = 400
-  POPUP_HEIGHT = 500
+  POPUP_HEIGHT = 600
   ARROW_HEIGHT = 12
   WEB_VIEW_URL = "http://localhost:7000/dossier/1"
 
