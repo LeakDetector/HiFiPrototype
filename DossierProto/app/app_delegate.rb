@@ -5,7 +5,7 @@ class AppDelegate
   POPUP_WIDTH = 400
   POPUP_HEIGHT = 600
   ARROW_HEIGHT = 12
-  WEB_VIEW_URL = "http://localhost:7000/dossier/1"
+  WEB_VIEW_URL = "http://stormy-dawn-3910.herokuapp.com/dossier/1"
 
   BUTTON_WIDTH = 80
   BUTTON_HEIGHT = 24
