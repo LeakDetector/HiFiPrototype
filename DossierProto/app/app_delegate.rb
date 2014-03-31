@@ -7,6 +7,9 @@ class AppDelegate
   ARROW_HEIGHT = 12
   WEB_VIEW_URL = "http://localhost:7000/dossier/1"
 
+  BUTTON_WIDTH = 80
+  BUTTON_HEIGHT = 24
+
   # Runs when the application launches (basically this is "main")
   def applicationDidFinishLaunching(notification)
     @app_name = NSBundle.mainBundle.infoDictionary['CFBundleDisplayName']
@@ -46,14 +49,24 @@ class AppDelegate
     @web_view.setDrawsBackground(false) #?
   end
 
+  def createButton
+    @button = NSButton.alloc.initWithFrame(CGRectMake(POPUP_WIDTH-BUTTON_WIDTH-10, POPUP_HEIGHT-ARROW_HEIGHT-BUTTON_HEIGHT-10, BUTTON_WIDTH, BUTTON_HEIGHT))
+    @button.setTitle("Quit")
+    @button.setButtonType(NSMomentaryLightButton)
+    @button.setBezelStyle(NSRoundedBezelStyle)
+    @button.setAction("terminate:")
+  end
+
   # Helper function to create all views and add them to the main window
   def setupMainPanel
     createStatusBarItem
     createWebView
+    createButton
 
     # Setup window and add subviews
     @window = PopupPanel.alloc.initPopup(POPUP_WIDTH + 2, POPUP_HEIGHT + 2)
     @window.contentView.addSubview(@web_view)
+    @window.contentView.addSubview(@button);
   end
 
   def showHide(sender)
