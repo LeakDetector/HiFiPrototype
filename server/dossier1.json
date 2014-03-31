@@ -1,4 +1,5 @@
 {
+    "visible": true,
     "images": {
         "primary": "/images/indra.png",
         "others": []
@@ -29,28 +30,91 @@
                 "fix": "Fix"
             }
         },
-        "phone_numbers": [
-            {
-                "type": "work",
-                "number": "412-268-4400"
+        "phone_numbers": {
+            "numbers": [
+                {
+                    "type": "work",
+                    "number": "412-268-4400"
+                }
+            ],
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
             }
-        ],
-        "email_addresses": ["indras@cs.cmu.edu"]
+        },
+        "email_addresses": {
+            "emails": ["indras@cs.cmu.edu"],
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
+        },
+        "current_address": {
+            "street_address": "430 Waterside Drive",
+            "city": "Virgina Beach",
+            "state": "VA",
+            "zip": "23452",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
+        }
+    },
+    "physical_traits": {
+        "height": "5 feet 9 inches",
+        "weight": "135 lbs",
+        "meta": {
+            "source": "Source",
+            "fix": "Fix"
+        }
     },
     "education": {
-        "school": "Carnegie Mellon University",
-        "major": "Chemistry",
-        "grad_year": 2008
+        "schools": [
+            {
+                "name": "Carnegie Mellon University",
+                "type": "college",
+                "major": "Chemistry",
+                "minors": ["Business", "Photography"],
+                "grad_year": 2008,
+                "meta": {
+                    "source": "Source",
+                    "fix": "Fix"
+                }
+            },
+            {
+                "name": "Generic High School",
+                "type": "highschool",
+                "grad_year": 2004,
+                "meta": {
+                    "source": "Source",
+                    "fix": "Fix"
+                }
+            }
+        ]
     },
-    "interests": ["Food & Recipes", "Beauty", "Travel", "Gardening"],
+    "interests": {
+        "list": ["Food & Recipes", "Beauty", "Travel", "Gardening"],
+        "meta": {
+            "source": "Source",
+            "fix": "Fix"
+        }
+    },
     "social_accounts": [
         {
             "type": "Facebook",
-            "url": "facebook.com/not.actual.url"
+            "url": "facebook.com/not.actual.url",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         },
         {
             "type": "Twitter",
-            "url": "twitter.com/not_actual_profile"
+            "url": "twitter.com/not_actual_profile",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         }
     ],
     "work_history": [
@@ -58,19 +122,31 @@
             "title": "Administrative Coordinator",
             "company": "Carnegie Mellon University Human-Computer Interaction Institute",
             "start": "2011",
-            "end": "Present"
+            "end": "Present",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         },
         {
             "title": "Business Project Administrator",
             "company": "DuPont",
             "start": "2008",
-            "end": "2010"
+            "end": "2010",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         },
         {
             "title": "Executive & Marketing Assistant",
             "company": "MAYA Design",
             "start": "2006",
-            "end": "2007"
+            "end": "2007",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         }
     ],
     "previous_known_addresses": [
@@ -78,7 +154,35 @@
             "street_address": "430 Waterside Drive",
             "city": "Virgina Beach",
             "state": "VA",
-            "zip": "23452"
+            "zip": "23452",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
+        }
+    ],
+    "other_known_locations": {
+        "locations": ["Shanghai, China", "London, United Kingdom"],
+        "meta": {
+            "source": "Source",
+            "fix": "Fix"
+        }
+    },
+    "organizations": [
+        {
+            "name": "Cool Club",
+            "position": "President",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
+        },
+        {
+            "name": "Alpha Beta What",
+            "meta": {
+                "source": "Source",
+                "fix": "Fix"
+            }
         }
     ]
 }

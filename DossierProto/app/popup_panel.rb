@@ -21,6 +21,9 @@ class PopupPanel < NSPanel
     if self.isVisible
       self.orderOut(false)
     else
+      # get the webview and reload it
+      self.contentView.subviews[0].reload(nil)
+      
       event_frame = NSApp.currentEvent.window.frame
       window_frame = self.frame
       window_top_left_position = CGPointMake(event_frame.origin.x + (event_frame.size.width / 2) - (window_frame.size.width / 2), event_frame.origin.y)
